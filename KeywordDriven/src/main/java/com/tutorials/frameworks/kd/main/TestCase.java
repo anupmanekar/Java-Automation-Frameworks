@@ -1,0 +1,70 @@
+package com.tutorials.frameworks.kd.main;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class TestCase {
+    private String testId;
+    private String testDescription;
+    private String result;
+    private boolean executeFlag;
+    private List<Step> steps;
+
+    public TestCase(String testId,String testDescription,boolean executeFlag){
+        this.testId = testId;
+        this.testDescription = testDescription;
+        this.executeFlag = executeFlag;
+        this.result = "";
+    }
+
+    public String getTestId() {
+        return testId;
+    }
+
+    public void setTestId(String testId) {
+        this.testId = testId;
+    }
+
+    public String getTestDescription() {
+        return testDescription;
+    }
+
+    public void setTestDescription(String testDescription) {
+        this.testDescription = testDescription;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public boolean isExecuteFlag() {
+        return executeFlag;
+    }
+
+    public void setExecuteFlag(boolean executeFlag) {
+        this.executeFlag = executeFlag;
+    }
+
+    public List<Step> getSteps() {
+        return steps;
+    }
+
+    public void setSteps(List<Step> steps) {
+        this.steps = steps;
+    }
+
+    @Override
+    public String toString() {
+        return "TestCase{" +
+                "testId='" + testId + '\'' +
+                ", testDescription='" + testDescription + '\'' +
+                ", result='" + result + '\'' +
+                ", executeFlag=" + executeFlag +
+                ", steps=" + steps +
+                '}';
+    }
+}
