@@ -1,0 +1,36 @@
+import com.thoughtworks.gauge.gradle.GaugeTask
+
+group 'com.tutorials.frameworks'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'gauge'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.thoughtworks.gauge.gradle:gauge-gradle-plugin:1.4.5'
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'com.thoughtworks.gauge:gauge-java:+'
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.seleniumhq.selenium:selenium-java:3.7.1'
+    compile 'ch.qos.logback:logback-classic:1.1.8'
+}
+
+
+gauge {
+    specsDir = 'specs'
+}
